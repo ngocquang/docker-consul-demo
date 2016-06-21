@@ -1,6 +1,8 @@
 # One max per physical node
 lb:
-  image: camptocamp/haproxy-consul:latest
+  #image: camptocamp/haproxy-consul:latest
+  image: quangdinh/docker-haproxy-consul:latest
+
   container_name: 'load-balancer'
   environment:
     HAPROXY_DOMAIN: '127.0.0.1.xip.io:test'
