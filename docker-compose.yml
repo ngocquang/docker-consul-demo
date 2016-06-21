@@ -5,3 +5,12 @@ web:
     SERVICE_NAME: 'www_hello'
     SERVICE_CHECK_HTTP: '/'
     SERVICE_CHECK_INTERVAL: '5s'
+abcproject-a4-1:
+  image: quangdinh/p16040-abcproject-a4-1
+  environment:
+    typeExecutive: 1
+    SERVICE_NAME: 'p16040-abcproject-a4-1'
+    HAPROXY_BACKEND_DEFAULT: 'p16040-abcproject-a4-1'
+    SERVICE_CHECK_HTTP: '/'
+    SERVICE_CHECK_INTERVAL: '5s'
+  restart: always
