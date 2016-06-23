@@ -1,16 +1,20 @@
 # As many as wanted
-web:
-  image: tutum/hello-world
-  environment:
-    SERVICE_NAME: 'www_hello'
-    SERVICE_CHECK_HTTP: '/'
-    SERVICE_CHECK_INTERVAL: '5s'
+
 abcproject-a4-1:
   image: quangdinh/p16040-abcproject-a4-1
   environment:
     typeExecutive: 1
     SERVICE_NAME: 'p16040-abcproject-a4-1'
-    HAPROXY_BACKEND_DEFAULT: 'p16040-abcproject-a4-1'
     SERVICE_CHECK_HTTP: '/'
     SERVICE_CHECK_INTERVAL: '5s'
+    HOSTSELF: 'http://123.30.130.184/'
+  restart: always
+abcproject-a4-2:
+  image: quangdinh/p16040-abcproject-a4-1
+  environment:
+    typeExecutive: 2
+    SERVICE_NAME: 'p16040-abcproject-a4-1'
+    SERVICE_CHECK_HTTP: '/'
+    SERVICE_CHECK_INTERVAL: '5s'
+    HOSTSELF: 'http://123.30.130.184/'
   restart: always
